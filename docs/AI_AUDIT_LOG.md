@@ -4,14 +4,14 @@
 
 | Thông tin | Nội dung |
 |---|---|
-| Môn học |  |
-| Mã môn học |  |
-| Lớp |  |
-| Học kỳ |  |
-| Tên bài tập / Project |  |
-| Tên sinh viên / Nhóm |  |
-| MSSV / Danh sách MSSV |  |
-| Giảng viên hướng dẫn |  |
+| Môn học | Software Requirments |
+| Mã môn học | SWR302 |
+| Lớp | SE20A02 |
+| Học kỳ | SU26 |
+| Tên bài tập / Project | FitnessTrainingSystem |
+| Tên sinh viên / Nhóm | Đặng Phương Nam |
+| MSSV / Danh sách MSSV | DE190177 |
+| Giảng viên hướng dẫn | TamTTT14 |
 | Ngày bắt đầu |  |
 | Ngày hoàn thành |  |
 
@@ -22,14 +22,14 @@
 Đánh dấu các công cụ AI đã sử dụng trong quá trình thực hiện bài tập/project.
 
 - [ ] ChatGPT
-- [ ] Gemini
-- [ ] Claude
+- [x] Gemini
+- [x] Claude
 - [ ] GitHub Copilot
 - [ ] Cursor
-- [ ] Antigravity
-- [ ] Perplexity
+- [x] Antigravity
+- [x] Perplexity
 - [ ] Microsoft Copilot
-- [ ] Công cụ khác: ....................................
+- [x] Công cụ khác: NotebookLM
 
 ---
 
@@ -55,7 +55,12 @@ Ví dụ:
 ### Mô tả mục tiêu sử dụng AI
 
 ```text
-Viết tại đây...
+- Tìm kiếm, tóm tắt tài liệu học thuật
+- Giải thích, ví dụ lý thuyết
+- Liệt kê, phân tích các business trong đề bài
+- Chấm điểm bài làm dựa trên góc nhìn của chuyên gia
+- Hướng dẫn mindset để xác định đúng yêu cầu
+```
 
 ## 4. Nhật ký sử dụng AI chi tiết
 
@@ -68,16 +73,16 @@ Viết tại đây...
 
 | Nội dung | Thông tin |
 |---|---|
-| Ngày sử dụng |  |
-| Công cụ AI | ChatGPT / Gemini / Claude / GitHub Copilot / Cursor / Antigravity / Khác |
-| Mục đích sử dụng |  |
-| Phần việc liên quan | Requirement / Design / Database / Frontend / Backend / Testing / Debug / Report / Presentation / Other |
-| Mức độ sử dụng | Hỗ trợ ý tưởng / Hỗ trợ một phần / Hỗ trợ nhiều / Sinh chính nội dung |
+| Ngày sử dụng | 10/06/2026 |
+| Công cụ AI | Claude |
+| Mục đích sử dụng | Xác định yêu cầu bài toán |
+| Phần việc liên quan | Requirement |
+| Mức độ sử dụng | Sinh chính nội dung |
 
 #### 4.1. Prompt đã sử dụng
 
 ```text
-Dán nguyên văn prompt đã hỏi AI tại đây.
+Dựa trên file docx đề tài tôi đã cung cấp, với vai trò là một kỹ sư phần mềm, bạn hãy chỉ ra các business trong đề bài và giải thích vì sao. Đồng thời bạn cũng phải tạo các use case và use story dựa trên các business mà bạn đã nêu. Câu trả lời của bạn nên chia hai bảng riêng biệt, bảng đầu tiên nêu các business và lí do, bảng thứ hai là các use case và use story bạn tạo dựa trên các business bạn đã nêu.   
 ```
 
 #### 4.2. Kết quả AI gợi ý
@@ -85,7 +90,7 @@ Dán nguyên văn prompt đã hỏi AI tại đây.
 Tóm tắt nội dung AI đã trả lời hoặc gợi ý.
 
 ```text
-Viết tại đây...
+Dựa trên đề bài Fitness Class Booking System, hệ thống có 12 business rule chính xoay quanh việc quản lý sức chứa lớp học và xử lý waitlist tự động khi có chỗ trống, yêu cầu thanh toán online trước khi xác nhận booking, chính sách hoàn tiền theo thời gian hủy (trước 6 giờ), tự động gán trainer khi user không chọn, gửi thông báo xác nhận/nhắc nhở, cơ chế đánh giá và rating trainer, phân quyền giữa Trainer (submit availability, xem participant) và Gym Manager (phê duyệt lịch, giám sát utilization), cùng với yêu cầu bảo mật (encrypted login, login Google) và hỗ trợ người dùng mới qua help section. Từ các quy tắc này, mình đã xây dựng 13 use case tương ứng với user story cho từng actor (Member, Trainer, Gym Manager, System), bao gồm các luồng chính như browse và book lớp, thanh toán, vào waitlist, auto-promote khi có hủy, hủy và nhận refund, auto-assign trainer, nhận thông báo, xem lịch sử và đánh giá, trainer quản lý lịch dạy, manager phê duyệt và theo dõi, đăng nhập bảo mật, và truy cập trợ giúp — nhằm đảm bảo các use case bao quát đầy đủ các nghiệp vụ then chốt của hệ thống.
 ```
 
 #### 4.3. Phần sinh viên/nhóm đã sử dụng từ AI
@@ -93,16 +98,47 @@ Viết tại đây...
 Mô tả rõ phần nào được sử dụng lại từ gợi ý của AI.
 
 ```text
-Viết tại đây...
+13 use case tương ứng với user story cho từng actor (Member, Trainer, Gym Manager, System), bao gồm các luồng chính như browse và book lớp, thanh toán, vào waitlist, auto-promote khi có hủy, hủy và nhận refund, auto-assign trainer, nhận thông báo, xem lịch sử và đánh giá, trainer quản lý lịch dạy, manager phê duyệt và theo dõi, đăng nhập bảo mật, và truy cập trợ giúp
 ```
 
 #### 4.4. Phần sinh viên/nhóm tự chỉnh sửa hoặc cải tiến
 
 Mô tả sinh viên/nhóm đã thay đổi, kiểm tra, sửa lỗi hoặc cải tiến gì so với gợi ý ban đầu của AI.
 
-```text
-Viết tại đây...
-```
+Dưới đây là phân tích dựa trên đề bài Fitness Class Booking System (Lab7_SWR302), với vai trò kỹ sư phần mềm phân tích yêu cầu.
+
+Bảng 1: Business Rules (Quy tắc nghiệp vụ) và giải thích
+| STT | Business Rule	Giải thích | Vì sao đây là business rule |
+|---|---|---|
+| 1 | Mỗi lớp học có sức chứa (capacity) cố định | Đây là constraint nghiệp vụ giới hạn số học viên/lớp, quyết định khi nào hệ thống phải chuyển sang xử lý waitlist; không phải yêu cầu kỹ thuật mà là chính sách vận hành của trung tâm |
+| 2	| Phải thanh toán online trước khi booking được xác nhận | Đảm bảo doanh thu thực tế trước khi giữ chỗ, tránh tình trạng giữ slot "ảo" không thanh toán, ảnh hưởng trực tiếp đến luồng nghiệp vụ booking |
+| 3	| Nếu lớp đầy, user được đưa vào waitlist |	Xử lý tình huống cung (capacity) nhỏ hơn cầu (demand), đảm bảo nguyên tắc công bằng theo thứ tự đăng ký |
+| 4	| Khi có người hủy, hệ thống tự động promote người đầu waitlist |	Tự động hóa quy trình tận dụng slot trống, giảm thao tác thủ công và đảm bảo phục vụ đúng thứ tự ưu tiên |
+| 5	| Hủy trước ít nhất 6 giờ so với giờ bắt đầu lớp mới được hoàn tiền |	Time-based policy nhằm giảm rủi ro tài chính cho trung tâm, đồng thời tạo động lực để học viên hủy sớm, giúp slot được tái sử dụng |
+| 6	| Nếu user không chọn trainer, hệ thống tự gán theo loại lớp | Đảm bảo mọi booking đều có trainer phù hợp, giảm friction (rào cản) trong trải nghiệm đặt lớp |
+| 7	| Gửi xác nhận và nhắc nhở qua email/app notification |	Quy tắc giao tiếp với khách hàng nhằm giảm tỷ lệ no-show và nâng cao trải nghiệm người dùng |
+| 8	| User xem lịch sử lớp, để feedback, rate trainer |	Cơ chế đánh giá chất lượng dịch vụ — là input để Gym Manager giám sát hiệu suất trainer |
+| 9	| Trainer submit availability và xem participant list | Trainer là actor có quyền tự quản lý lịch làm việc và thông tin lớp mình phụ trách |
+| 10	| Gym Manager phê duyệt lịch trainer và theo dõi class utilization |	Quy tắc về governance/quản trị, đảm bảo có một lớp kiểm soát giữa trainer và hệ thống vận hành |
+| 11	| Tài khoản hỗ trợ encrypted login và login qua bên thứ ba (Google) |	Yêu cầu bảo mật dữ liệu người dùng kết hợp tiện lợi đăng nhập, ảnh hưởng đến luồng authentication toàn hệ thống |
+| 12	| Có help section hướng dẫn người dùng mới |	Yêu cầu hỗ trợ/usability nhằm giảm rào cản onboarding cho người dùng lần đầu |
+
+Bảng 2: Use Case và User Story tương ứng
+| ID | Use Case | Actor chính | User Story |
+|---|---|---|---|
+| UC01 |	Browse classes & view trainer profiles |	Member |	As a member, I want to browse upcoming classes and view trainer profiles (expertise, certifications) so that I can choose the class and trainer that fit my needs. |
+| UC02 |	Book a class slot |	Member |	As a member, I want to reserve a time slot for a class so that I can secure my spot before it fills up. |
+| UC03 |	Complete online payment |	Member | As a member, I want to pay online when booking so that my reservation is confirmed immediately. |
+| UC04 |	Join waitlist when class is full |	Member |	As a member, I want to be automatically placed on a waitlist when a class is full so that I still have a chance to attend if a spot opens up. |
+| UC05 |	Auto-promote from waitlist |	System | As the system, I want to automatically promote the next waitlisted member when a cancellation occurs so that available slots are filled without manual intervention. |
+| UC06 |	Cancel booking & request refund |	Member |	As a member, I want to cancel my booking at least 6 hours before class start time so that I receive a refund according to policy. |
+| UC07 |	Auto-assign trainer |	System |	As the system, I want to automatically assign a trainer based on class type when the member doesn't select one so that every class has a qualified trainer. |
+| UC08 |	Receive confirmation & reminder notifications |	Member |	As a member, I want to receive booking confirmations and reminders via email or app notification so that I don't forget or miss my class. |
+| UC09 |	View history, leave feedback & rate trainer |	Member |	As a member, I want to view my class history and rate my trainer after class so that I can share feedback and help improve service quality. |
+| UC10 |	Submit availability & view participants |	Trainer |	As a trainer, I want to submit my available time slots and view the participant list for my classes so that I can plan and prepare accordingly. |
+| UC11 |	Approve trainer schedules & monitor utilization |	Gym Manager |	As a gym manager, I want to approve trainer schedules and monitor class utilization so that I can ensure efficient resource allocation and service quality. |
+| UC12 |	Register/login (encrypted or via Google) |	Member/Trainer/Manager |	As a user, I want to log in securely with an encrypted password or through Google so that my account stays protected while I have a convenient login option. |
+| UC13 |	Access help section |	New user |	As a new user, I want to access a help section so that I can quickly understand how to use the system. |
 
 #### 4.5. Minh chứng
 
@@ -110,7 +146,8 @@ Viết tại đây...
 |---|---|
 | Link commit |  |
 | File liên quan |  |
-| Screenshot |  |
+| Screenshot | <img width="2167" height="1321" alt="image" src="https://github.com/user-attachments/assets/6a81608f-77c9-48ee-8b8e-5b253575d09b" />
+ |
 | Kết quả chạy/test |  |
 | Link video demo |  |
 | Ghi chú khác |  |
@@ -120,7 +157,7 @@ Viết tại đây...
 Sinh viên/nhóm học được gì sau lần sử dụng AI này?
 
 ```text
-Viết tại đây...
+Em đã học được cách xác định các business có trong đề bài dựa trên các actor sau đó là use case và user story để ví dụ dễ hiểu business đó xảy ra khi nào
 ```
 
 ---
@@ -130,15 +167,15 @@ Viết tại đây...
 | Nội dung | Thông tin |
 |---|---|
 | Ngày sử dụng |  |
-| Công cụ AI | ChatGPT / Gemini / Claude / GitHub Copilot / Cursor / Antigravity / Khác |
-| Mục đích sử dụng |  |
-| Phần việc liên quan | Requirement / Design / Database / Frontend / Backend / Testing / Debug / Report / Presentation / Other |
-| Mức độ sử dụng | Hỗ trợ ý tưởng / Hỗ trợ một phần / Hỗ trợ nhiều / Sinh chính nội dung |
+| Công cụ AI | Gemini |
+| Mục đích sử dụng | Chấm bài vẽ Use Case Diagram |
+| Phần việc liên quan | Report |
+| Mức độ sử dụng | Hỗ trợ nhiều |
 
 #### 4.1. Prompt đã sử dụng
 
 ```text
-Dán nguyên văn prompt đã hỏi AI tại đây.
+Với vai trò là một kĩ sư phần mềm tại công ty Microsoft, bạn hãy chấm bài vẽ Use case diagram của mình. Bạn hãy đánh giá theo các tiêu chí sau: Có đầy đủ các Actor không, đã đủ các use case chưa, mối quan hệ đã đúng chưa, 
 ```
 
 #### 4.2. Kết quả AI gợi ý
